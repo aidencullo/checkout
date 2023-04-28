@@ -1,38 +1,33 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+import { ref } from 'vue';
 
-const count = ref(0)
+const message = ref("I had an excellent experience with Harley and Sons!");
+  
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+<h1>Harley and Sons LLC</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+<div class="card">
+
+  <div class="prompt">
+  <span>What was your experience with Harley and Sons?</span>
   </div>
+  
+  <textarea v-model="message"></textarea>
+</div>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>
 .read-the-docs {
-  color: #888;
+    color: #888;
 }
+
+.prompt {
+    padding: 10px;
+}
+
+
 </style>
