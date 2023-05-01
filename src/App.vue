@@ -1,13 +1,10 @@
 <script setup lang="ts">
-  import HelloWorld from './components/HelloWorld.vue'
+  import Review from './components/Review.vue'
 </script>
 
 <template>
 <div class="bg">
-<div>
-  <img src="./assets/gavel.svg" class="logo vue" alt="gavel" />
-</div>
-<HelloWorld />
+<Review />
   </div>
 </template>
 
