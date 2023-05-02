@@ -4,7 +4,7 @@
 
 <template>
 <div class="bg">
-<Review />
+<Review companyName="company Y" companyLink="[company Y link]"/>
   </div>
 </template>
 

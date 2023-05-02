@@ -7,6 +7,11 @@ const yes = ref(false);
 const no = ref(false);
 const thanks = ref(false);
 
+const props = defineProps({
+  companyName: String,
+  companyLink: String
+})
+
 </script>
 
 <template>
@@ -14,7 +19,7 @@ const thanks = ref(false);
 <div class="card" v-if="prompt">
 
   <div class="prompt" >
-  <h2>Did you have a good experience with company X?</h2>
+  <h2>Did you have a good experience with {{ companyName }}?</h2>
   </div>
 
   <button @click="() => {
@@ -32,7 +37,7 @@ const thanks = ref(false);
 <div class="card" v-if="yes">
 
   <div class="prompt" >
-  <h2>Redirecting to company X website...</h2>
+  <h2>Redirecting to {{ companyLink }}...</h2>
   </div>
 
 </div>
@@ -40,7 +45,7 @@ const thanks = ref(false);
 <div class="card" v-if="no">
 
   <div class="prompt" >
-  <h2>What could company X have done better?</h2>
+  <h2>What could {{ companyName }} have done better?</h2>
   </div>
   <input>
   <button @click="() => {
